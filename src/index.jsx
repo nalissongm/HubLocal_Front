@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './styles/global-styles';
 import { theme } from './styles/theme';
 
+import { Home } from './templates/Home';
 import { Login } from './templates/Login';
 import { Register } from './templates/Register';
 
@@ -14,6 +15,7 @@ ReactDOM.render(
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
+          <Route element={<Home />} path="/" exact />
           <Route element={<Login />} path="/login" exact />
           <Route element={<Register />} path="/register" exact />
         </Routes>
